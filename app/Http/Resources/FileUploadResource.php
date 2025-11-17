@@ -12,7 +12,7 @@ class FileUploadResource extends JsonResource
         return [
             'id'                    => $this->id,
             'filename'              => $this->original_filename,
-            'status'                => $this->status,
+            'status'                => ucwords($this->status),
             'total_rows'            => $this->total_rows,
             'processed_rows'        => $this->processed_rows,
             'progress_percentage'   => $this->progress_percentage,
